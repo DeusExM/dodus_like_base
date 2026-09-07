@@ -47,3 +47,16 @@ if ! swapon --show | grep -q '/swapfile'; then
 fi
 
 echo "Installation système terminée."
+
+
+# Node.js 22
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+apt install -y nodejs
+
+# Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+echo
+echo "Node : $(node --version 2>/dev/null || true)"
+echo "npm  : $(npm --version 2>/dev/null || true)"
+echo "Tailscale installé. Connexion à faire ensuite avec : sudo tailscale up"

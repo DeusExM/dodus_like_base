@@ -10,8 +10,9 @@ fi
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-npm install -g opencode-ai
-npm install -g playwright
+npm install -g opencode-ai@1.18.29
+npm install -g playwright@1.63.0
+npm install -g pnpm
 
 playwright install chromium
 
